@@ -1,5 +1,5 @@
 {
-  "name": "@vue2vis/utils",
+  "name": "@rentmagic/vis-utils",
   "version": "1.0.1-alpha.0",
   "description": "Utility functions for the @vue2vis package family.",
   "author": "Alex Couturon <infocontact.alex@gmail.com>",
@@ -28,6 +28,7 @@
   "bugs": {
     "url": "https://github.com/alexcode/vue2vis/issues"
   },
+  "type": "module",
   "dependencies": {
     "vis-util": "^4.0.0"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "@vue2vis/network",
+  "name": "@rentmagic/vis-network",
   "version": "1.0.1-alpha.0",
   "description": "Vue2 wrapper for the Visjs Network library.",
   "author": "Alex Couturon <infocontact.alex@gmail.com>",
@@ -21,6 +21,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "serve": "vue-cli-service serve ./examples/main.js",

@@ -1,5 +1,5 @@
 {
-  "name": "vue2vis",
+  "name": "@rentmagic/vue3vis",
   "version": "0.1.0",
   "private": true,
   "description": "vue2vis monorepo",
@@ -23,6 +23,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "type": "module",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -44,13 +45,15 @@
     "visjs"
   ],
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.13",
     "core-js": "^3.6.4",
     "vis-data": "^6.2.1",
-    "vis-util": "^4.0.0"
+    "vis-util": "^4.0.0",
+    "vite": "6.1.0",
+    "vue": "^3.5.13"
   },
-  "peerDependencies": {
-    "vue": "^2.6.11"
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -66,13 +69,10 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.1.2",
-    "husky": "^4.2.3",
     "lerna": "^3.20.2",
     "moment": "^2.24.0",
     "prettier": "^1.19.1",
-    "rollup": "^2.0.6",
-    "rollup-plugin-vue": "^5.1.6",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "rollup": "^4.34.6",
+    "rollup-plugin-vue": "^6.0.0"
   }
 }

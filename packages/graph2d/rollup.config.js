@@ -3,7 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import nodePolyfills from "rollup-plugin-node-polyfills";
 import { terser } from "rollup-plugin-terser";
-import vue from "rollup-plugin-vue";
+import vue from "@vitejs/plugin-vue"; // Use @vitejs/plugin-vue for Vue 3
 
 export default [
   {
@@ -12,7 +12,7 @@ export default [
       {
         format: "esm",
         sourcemap: true,
-        file: "dist/graph2d.esm.min.js"
+        file: "dist/utils.esm.min.js"
       },
       {
         name: "vis",
@@ -20,32 +20,22 @@ export default [
         exports: "named",
         sourcemap: true,
         format: "umd",
-        file: "dist/graph2d.umd.min.js"
+        file: "dist/utils.umd.min.js"
       }
     ],
     plugins: [
       externals({
-        exclude: [
-          "component-emitter",
-          "propagating-hammerjs",
-          "@egjs/hammerjs",
-          "keycharm",
-          "uuid"
-        ]
+        exclude: ["uuid"]
       }),
       nodePolyfills(),
       resolve({ browser: true }),
-      commonjs({
-        namedExports: {
-          uuid: ["v4"]
-        }
-      }),
+      commonjs(),
       terser({
         output: {
           comments: "some"
         }
       }),
-      vue()
+      vue() // Use the Vue 3 plugin
     ]
   }
 ];

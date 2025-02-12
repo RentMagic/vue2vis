@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import nodePolyfills from "rollup-plugin-node-polyfills";
 import { terser } from "rollup-plugin-terser";
+import vue from "@vitejs/plugin-vue"; // Use @vitejs/plugin-vue for Vue 3
 
 export default [
   {
@@ -33,7 +34,8 @@ export default [
         output: {
           comments: "some"
         }
-      })
+      }),
+      vue() // Use the Vue 3 plugin
     ]
   }
 ];
