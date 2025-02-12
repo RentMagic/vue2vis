@@ -5,7 +5,7 @@
 <script>
 import { DataSet, DataView } from "vis-data/esnext";
 import { Timeline } from "vis-timeline/esnext";
-import { mountVisData, translateEvent } from "@vue2vis/utils";
+import { mountVisData, translateEvent } from "@rentmagic/vis-utils";
 
 export default {
   name: "timeline",
