@@ -1,6 +1,6 @@
 {
   "name": "@rentmagic/vis-graph2d",
-  "version": "1.0.1-alpha.2",
+  "version": "1.0.1-alpha.3",
   "description": "Vue2 wrapper for the Visjs Graph2d library.",
   "author": "Alex Couturon <infocontact.alex@gmail.com>",
   "homepage": "https://github.com/alexcode/vue2vis#readme",
